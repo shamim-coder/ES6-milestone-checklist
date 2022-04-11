@@ -111,7 +111,7 @@ const nestedObj = {
     },
 };
 
-console.log(nestedObj.companyDetails?.companies?.[3]);
+// console.log(nestedObj.companyDetails?.companies?.[3]);
 
 const {
     ownerName,
@@ -120,14 +120,49 @@ const {
     },
 } = nestedObj;
 
-console.log("Owner:", ownerName, "area:", company3, "Company:", company1);
+// console.log("Owner:", ownerName, "area:", company3, "Company:", company1);
 
 // rest parameter
 function funcName(x, y, ...z) {
     // console.log(`x = ${x}, y = ${y}, z = ${z}`);
     // console.log(x, y, z);
 
-    z.map((rest) => console.log(rest));
-    console.log(x, y, ...z);
+    // z.map((rest) => console.log(rest));
+    return [x, y, ...z];
 }
-funcName(30, 50, 100, 120, 40, 70);
+
+const num = funcName(30, 50, 100, 120, 40, 70);
+// const oneProduct = products[0];
+// console.log(oneProduct);
+
+for (let x in products[0]) {
+    // console.log(x, products[0][x]);
+}
+// console.log(num);
+
+const newNum = num.map((x) => {
+    return x;
+});
+// console.log(newNum);
+
+// let x = 20;
+// {
+//     let x = 10;
+//     console.log("inside ", x);
+// }
+// console.log("outside", x);
+
+let z = 5;
+const squareNumber = (x) => x * x + z;
+
+// console.log(squareNumber(5));
+
+function newFunction() {
+    return arguments;
+}
+
+const arrFunc = (...param) => {
+    return param;
+};
+
+console.log(arrFunc(25, 36, 477, 99, 78));
