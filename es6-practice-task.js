@@ -121,3 +121,13 @@ const {
 } = nestedObj;
 
 console.log("Owner:", ownerName, "area:", company3, "Company:", company1);
+
+// rest parameter
+function funcName(x, y, ...z) {
+    // console.log(`x = ${x}, y = ${y}, z = ${z}`);
+    // console.log(x, y, z);
+
+    z.map((rest) => console.log(rest));
+    console.log(x, y, ...z);
+}
+funcName(30, 50, 100, 120, 40, 70);
