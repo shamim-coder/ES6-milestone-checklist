@@ -97,7 +97,7 @@ const sumOfNumber = function (number1, number2, number3 = 7) {
 // console.log(sumOfNumber(25, 25)); // 57
 // console.log(sumOfNumber(25, 25, 25)); // 75
 
-// 11. declear a nested object, that means
+// 11. declare a nested object, that means declare a object into an another object property into an another object property, declare a this type of object. and  the value of any property will be an array
 const nestedObj = {
     ownerName: "Md Akramuzzaman",
     companyName: "confident group",
